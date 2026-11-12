@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bertuscore"
+version = "0.1.0"
+description = "BERTUScore: a BERTScore-style metric for Maltese, built on the BERTu language model."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Kurt Abela" }]
+keywords = ["maltese", "machine-translation", "evaluation", "bertscore", "nlp", "bertu"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "bert-score>=0.3.13",
+    "torch",
+    "transformers",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+bertuscore = "bertuscore.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/kurtabela/bertuscore"
+Issues = "https://github.com/kurtabela/bertuscore/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: downloads the real MLRS/BERTu model (~500 MB) and runs it; deselected by default",
+]
+addopts = "-m 'not slow'"
