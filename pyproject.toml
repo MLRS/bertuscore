@@ -30,8 +30,8 @@ dev = ["pytest"]
 bertuscore = "bertuscore.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/kurtabela/bertuscore"
-Issues = "https://github.com/kurtabela/bertuscore/issues"
+Homepage = "https://github.com/MLRS/bertuscore"
+Issues = "https://github.com/MLRS/bertuscore/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]

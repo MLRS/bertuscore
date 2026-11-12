@@ -17,7 +17,7 @@ F1 score between 0 and 1 for every pair. Higher means more similar in meaning.
 BERTUScore is not on PyPI yet, so install it straight from GitHub (needs Python 3.10+):
 
 ```bash
-pip install git+https://github.com/kurtabela/bertuscore.git
+pip install git+https://github.com/MLRS/bertuscore.git
 ```
 
 This also installs `torch`, `transformers` and `bert-score`. The first time you score
@@ -141,7 +141,7 @@ keep results reproducible:
 ## Development
 
 ```bash
-git clone https://github.com/kurtabela/bertuscore.git
+git clone https://github.com/MLRS/bertuscore.git
 cd bertuscore
 pip install -e ".[dev]"
 pytest                 # fast tests, no download
