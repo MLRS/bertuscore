@@ -2,10 +2,11 @@
 
 **BERTUScore scores how close a Maltese sentence is to a reference Maltese sentence.**
 It is [BERTScore](https://arxiv.org/abs/1904.09675) computed with
-[BERTu](https://huggingface.co/MLRS/BERTu), a BERT model trained specifically on Maltese,
-so it understands Maltese words and spelling (ċ, ġ, ħ, ż, għ) far better than an
-English-only metric. The main use is **evaluating machine translation into Maltese**, but it
-works for any task where you compare generated Maltese text with a reference.
+[BERTu](https://huggingface.co/MLRS/BERTu), a BERT model trained specifically on Maltese text,
+including its spelling (ċ, ġ, ħ, ż, għ), instead of on English. The main use is
+**evaluating machine translation into Maltese**, but it works for any task where you compare
+generated Maltese text with a reference. How closely its scores track human judgments is not
+tested in this repository (see "Good to know" below).
 
 You give it candidate sentences and reference sentences. You get back a precision, recall and
 F1 score between 0 and 1 for every pair. Higher means more similar in meaning.
